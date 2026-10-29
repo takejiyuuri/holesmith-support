@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>サポート｜holesmith</title>
+<meta name="description" content="holesmith の使い方とよくある質問。盤に開ける穴の配置と、加工用の寸法つきの図をつくるアプリです。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-180.png">
+<style>
+  :root {
+    --bg: #f4f7fa; --surface: #ffffff; --text: #18222c; --muted: #55606b; --line: #d8dee5;
+    --accent: #1f5bd8; --accent-soft: #e6eefc; --orange: #c2551b;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 20px rgba(0,0,0,.06); --radius: 16px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1318; --surface: #171e25; --text: #e8eef4; --muted: #a3afba; --line: #2a343e;
+      --accent: #7aa7ff; --accent-soft: #16233a; --orange: #f39a5f;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; overflow-wrap: anywhere; line-break: strict; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .hero { padding: 40px 0 28px; background: radial-gradient(120% 80% at 50% 0%, var(--accent-soft), transparent 70%); }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .brand img { width: 56px; height: 56px; border-radius: 13px; box-shadow: var(--shadow); }
+  .brand .kicker { font-size: 14px; color: var(--muted); line-height: 1.4; }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0; }
+  .pitch { font-size: 18px; margin: 12px 0 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { font-size: 14px; padding: 4px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+  section { margin: 0 0 18px; padding: 22px 20px; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); }
+  main { padding: 8px 0 32px; }
+  h2 { font-size: 21px; line-height: 1.4; margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+  h2 .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; }
+  h3 { font-size: 17px; margin: 18px 0 4px; }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 1.3em; }
+  li { margin: 4px 0; }
+  .note { font-size: 14px; color: var(--muted); }
+  .warn { border-left: 4px solid var(--orange); padding: 6px 12px; background: var(--accent-soft); border-radius: 8px; }
+  dl.faq dt { font-weight: 700; margin-top: 14px; }
+  dl.faq dd { margin: 4px 0 0; }
+  .form-link { display: inline-block; margin-top: 8px; padding: 12px 22px; border-radius: 12px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+  footer { padding: 8px 0 40px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="./icon-180.png" width="56" height="56" alt="">
+      <div class="kicker">サポートページ<br>使い方とよくある質問</div>
+    </div>
+    <h1>holesmith</h1>
+    <p class="pitch">盤に開ける穴の配置を決めて、加工用の寸法つきの図をつくるアプリです。</p>
+    <ul class="chips">
+      <li>寸法つきの図</li>
+      <li>上下の部品を 3D で確かめる</li>
+      <li>当たる・近いをすぐ知らせる</li>
+      <li>電波がなくても使える</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="num" aria-hidden="true">1</span>できること</h2>
+  <ul>
+    <li>盤の大きさ（横幅・奥行・有効高さ）を入れ、上面と下面に穴を並べる。</li>
+    <li>CD 管・PF 管・VE 管・E 管用のコネクタ、穴だけ（穴径を自由に入れる）を、ライン（L1〜L4）に置く。</li>
+    <li>累進寸法・ピッチ寸法と、となりの部品との隙間（外径どうし）を図に出す。</li>
+    <li>部品どうしや、上面と下面の部品が当たるときは「接触」「接触の可能性」「余裕不足」で知らせる。</li>
+    <li>3D で、盤と上下の部品を回して見る。</li>
+    <li>均等化、千鳥配置・同列配置、左から・右からの詰め配置。</li>
+    <li>図と寸法だけの PDF（累進・ピッチ）と、図面のファイルを保存する。</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num" aria-hidden="true">2</span>はじめかた</h2>
+  <p>最初に起動すると、見本の図面が開きます。上の「？」→「説明書」に、画面ごとの使い方があります。</p>
+  <h3>配置</h3>
+  <p>「配置」のタブで円の種類・サイズ・ラインを選び、「ここに配置」を押します。図の赤い目印を押したまま動かすと、置く場所を決められます。</p>
+  <h3>調整</h3>
+  <p>円を押すと選べます。選んだ円はドラッグで動き、ほかの円に当たると止まります。「均等化」「千鳥配置」「同列配置」もここにあります。</p>
+  <h3>保存・PDF</h3>
+  <p>上の保存（ファイル）のボタンから、この端末に保存・ほかの場所に保存（iCloud Drive・メールなど）・PDF の保存ができます。作業中の図面は、端末の中に自動で残ります。</p>
+</section>
+
+<section>
+  <h2><span class="num" aria-hidden="true">3</span>無料体験と購入</h2>
+  <p>図面を描く・シミュレーション（判定・3D）は、無料で使えます。保存・出力（この端末に保存・ほかの場所に保存・PDF）は、次のどちらかで使えます。</p>
+  <ul>
+    <li><b>7日間無料トライアル</b>：7 日間、保存・出力を含むすべての機能を無料で試せます。</li>
+    <li><b>フル機能解放</b>（買い切り）：保存・出力を含むすべての機能を、期限なく使えます。</li>
+  </ul>
+  <p class="warn">7日後は保存・出力が停止し、続けて使うにはフル機能解放の購入が必要です。図面を描く・見ることは、そのまま使えます。</p>
+  <h3>購入を復元する</h3>
+  <p>機種変更やアプリを入れ直したときは、上の「？」→「購入・ライセンス」→「購入を復元」を押してください。同じ Apple アカウントで購入したものが戻ります。</p>
+  <h3>返金</h3>
+  <p>購入は Apple が扱っています。返金のご相談は、Apple の「問題を報告」（reportaproblem.apple.com）からお願いします。</p>
+</section>
+
+<section>
+  <h2><span class="num" aria-hidden="true">4</span>よくある質問</h2>
+  <dl class="faq">
+    <dt>描いた図面は消えませんか？</dt>
+    <dd>作業中の図面は、端末の中に自動で残ります。アプリを削除すると消えるので、残したい図面は「この端末に保存」か「ほかの場所に保存」で保存してください。</dd>
+    <dt>判定（接触など）は正確ですか？</dt>
+    <dd>部品は登録した寸法（円筒・多角柱の近似）で判定しています。目安としてお使いいただき、加工の前に実物で確かめてください。施工余裕を満たしていても、工具の作業空間や電線の曲げまで確かめたことにはなりません。</dd>
+    <dt>部品の寸法はどこから来ていますか？</dt>
+    <dd>公開されている資料をもとにしています。一部は図などからの概算を含みます。</dd>
+    <dt>電波がなくても使えますか？</dt>
+    <dd>使えます。購入と購入の復元のときだけ、App Store に接続します。</dd>
+    <dt>保存・PDF を押すと購入の案内が出ます</dt>
+    <dd>無料体験を始める前か、無料体験が終わったあとです。「7日間無料で全機能を試す」か「購入する」を選んでください。購入済みなのに出るときは、「購入を復元」を押してください。</dd>
+  </dl>
+</section>
+
+<section>
+  <h2><span class="num" aria-hidden="true">5</span>動作環境</h2>
+  <p>iOS 15 以降の iPhone・iPad。</p>
+</section>
+
+<section id="contact">
+  <h2><span class="num" aria-hidden="true">6</span>お問い合わせ</h2>
+  <p>不具合やご要望は、お問い合わせフォーム（Google フォーム）からお知らせください。返信はご入力のメールアドレスにお送りします。図面のファイルは送らないでください。</p>
+  <a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfFIK1ahkLFwG_HObmtmOpp04Lm4f5q6IrEZPSuVSiakqp1FQ/viewform" target="_blank" rel="noopener">お問い合わせフォームを開く</a>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p><a href="./privacy.html">プライバシーポリシー</a></p>
+  <p>© 2026 takejiyuuri</p>
+</footer>
+
+</body>
+</html>
